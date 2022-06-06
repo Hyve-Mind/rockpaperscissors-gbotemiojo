@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rockPaperScissors</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class = "Thegame">
+    <div class = "headerContainer">
+        <div class = "header">
+        <div class = "title">
+             <img src="assets/title.png" alt="rock paper scissors">
+        </div>
+          <div class = "scores">
+              <p>SCORE</p>
+              <p id = "scoreBoard">0</p>
+          </div>
+       </div>
+    </div>
+    <div id = "rulesPicture" onclick = "reset()">
+      <img src="assets/image-rules.svg" alt="image rules">
+    </div>
+    <div id = "interactionContainer">
+      <div class = "interaction">
+          <div class = "paper"><img src="assets/Paper.png" alt="paper image"></div>
+          <div class = "Scissors"><img src="assets/Scissors.png" alt="scissors image"></div>
+          <div class = "rock"><img src = "assets/Rock.png" alt = "rock image"></div>
+      </div>
+    </div>
+    <div id = "interactedContainer">
+      <div class = "interacted">
+          <div class = "userInput">
+              <p>YOU PICKED</p>
+              <img src="assets/Paper.png" id = "userhandsImage" alt="">
+          </div>
+          <div class = "winorlose">
+              <p id = "gameState">YOU WIN</p>
+              <button class = "playagain">PLAY AGAIN</button>
+          </div>
+          <div class = "computerInput">
+              <p>THE HOUSE PICKED</p>
+              <p><img src="assets/Scissors.png" id = "computerHandsImage" alt=""></p>
+          </div>
+          <div class = "winorloseMobile">
+            <p id = "gameStateMobile">YOU WIN</p>
+            <button class = "playagain">PLAY AGAIN</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id = "rulesContainer">
+    <div id = "rules">RULES</div> 
+  </div>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+background: radial-gradient(#1F3756, #141539);;
+}
+.Thegame{
+    display: flex;
+    justify-content: center;
+    max-width: 100vw;
+    flex-wrap: wrap;
+}
+.header{
+    display:flex;
+    margin-top: 35px;
+    border: 1px solid white;
+    width: 500px;
+    height: 110px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+.headerContainer{
+    min-width: 90vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header img{
+    width: 120px;
+    margin-left: 20px;
+}
+.scores{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 70px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+.scores :first-child{
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #2A46C0;
+}
+.scores :last-child{
+    font-size: 35px;
+    color: #2f3346;
+    font-weight: 600;
+}
+.interaction{
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: space-around;
+    background: url(assets/triangle.png);
+    background-position:center ;
+    background-size: 200px;
+    background-repeat: no-repeat;
+}
+.interaction img{
+    width: 140px;
+}
+#interactionContainer{
+    display: flex;
+    min-width:90vw;
+    align-items: center;
+    justify-content: center;
+}
+.paper{
+margin-right: 15px;
+}
+.scissors{
+margin-right: 15px;
+}
+.interacted{
+display: flex;
+align-items: center;
+width: 70vw;
+justify-content: space-around;
+height: 65vh;
+}
+#interactedContainer{
+    display: none;
+    align-items: center;
+    height: 80vh;
+    width: 70vw;
+}
+.userInput{
+    display: flex;
+    flex-direction: column;
+    height: 53vh;
+    align-items: center;
+}
+.userInput img{
+ margin-top: 10vh;
+ width: 200px;
+}
+.userInput p{
+    color: white;
+}
+.winorlose{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.winorlose p{
+    color: white;
+    font-size: 30px;
+}
+.winorlose button{
+    padding: 8px;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+.computerInput{
+    display: flex;
+    flex-direction: column;
+    height: 53vh;
+    align-items: center; 
+}
+.computerInput img{
+    margin-top: 10vh;
+    width: 200px;
+}
+.computerInput p{
+    color: white;  
+}
+#rulesContainer{
+display: flex;
+justify-content: flex-end;
+}
+#rules{
+display: flex;
+margin-right: 5vw;
+color: white;
+border: 1px white solid;
+width: 65px;
+height: 20px;
+border-radius: 5px;
+align-items: center;
+justify-content: center;
+letter-spacing: 1px;
+font-size: 10px;
+}
+#rulesPicture{
+display: none;
+margin-top: 20px;
+}
+.winorloseMobile{
+   display: none;     
+}
+@media(min-width: 0px) and (max-width: 800px){
+    .computerInput{
+        flex-direction: column-reverse; 
+        height: fit-content;
+        min-width: 48vw;
+        max-height:30vh;
+        justify-content: center;
+    }
+    .computerInput img{
+        width: 120px;
+        justify-self: flex-start;
+    }
+    .userInput{
+        flex-direction: column-reverse;
+        align-items: center;
+        height: fit-content;
+        min-width: 48vw;
+        max-height:30vh;
+        justify-content: center;
+    }
+    .userInput img{
+        width: 120px;
+    }
+    .winorlose{
+        align-self: flex-end;
+        border: 1px solid rgb(97, 97, 82);
+        display: none;
+    }
+    .interacted{
+        width: 100vw;
+        align-items: flex-start;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    #interactedContainer{
+        width: 100vw;
+    }
+    .winorloseMobile{
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+    }
+    .winorloseMobile p{
+        color: white;
+        font-size: 40px;
+    }
+    .winorloseMobile button{
+        padding: 8px;
+        border-radius: 5px;
+        letter-spacing: 2px;
+        font-size: 12px;
+    }
+    .header{
+        width: 80vw;
+    }
+    .header img{
+        width: 80px;
+    }
+    #rulesContainer{
+        justify-content: center;
+        height: 60px;
+        align-items: flex-end;
+    }
+    #rules{
+        width: 85px;
+        height: 30px;
+    }
+}
