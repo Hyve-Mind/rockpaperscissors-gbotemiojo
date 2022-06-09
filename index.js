@@ -15,11 +15,12 @@ clickPaper.addEventListener("click",paper)
 clickRock.addEventListener("click",rock)
 clickScissors.addEventListener("click",scissors)
 rulesPop.addEventListener("click",rulesPopup)
+rules.addEventListener("click", reset)
 playagain.forEach(button => {
     button.addEventListener("click",playAgain)
 });
 let score = 0
-function randomNumber(){
+function randomImage(){
     let random = Math.floor(Math.random() * 3) + 1
     if(random ===1){
         computerhandsimage = document.getElementById("computerHandsImage").src = "assets/Rock.png"   
@@ -43,7 +44,7 @@ function paper(){
 interactedContainer.style.display = "flex"
 interactionContainer.style.display = "none"
 userhandsimage = document.getElementById("userhandsImage").src = "assets/Paper.png"
-randomNumber()
+randomImage()
 if(computerhandsimage === "assets/Paper.png"){
     score += 0
 gamestate.textContent = "IT'S A TIE"
@@ -71,7 +72,7 @@ function scissors(){
     interactedContainer.style.display = "flex"
     interactionContainer.style.display = "none" 
     userhandsimage = document.getElementById("userhandsImage").src = "assets/Scissors.png" 
-    randomNumber()
+    randomImage()
     if(computerhandsimage === "assets/Paper.png"){
         score += 1
     gamestate.textContent = "YOU WIN!"
@@ -97,7 +98,7 @@ function rock(){
     interactedContainer.style.display = "flex"
     interactionContainer.style.display = "none"
     userhandsimage = document.getElementById("userhandsImage").src = "assets/Rock.png"
-    randomNumber()
+    randomImage()
     if(computerhandsimage === "assets/Paper.png"){
         score -= 1
     gamestate.textContent = "YOU LOSE"
